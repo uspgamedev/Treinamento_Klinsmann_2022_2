@@ -29,8 +29,9 @@ public class BasicEnemy : Enemy
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-        if(isTriggered && collision.gameObject.tag == "Ground"){
+        if(collision.gameObject.tag == "Ground")
             enemyJump();
-        }
+        if(collision.gameObject.tag == "BasicEnemy")
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
     }
 }
