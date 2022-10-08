@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - GroundEnemy
-  - WaterEnemy
+  - Ground
+  - BasicEnemy
   layers:
   - Default
   - TransparentFX

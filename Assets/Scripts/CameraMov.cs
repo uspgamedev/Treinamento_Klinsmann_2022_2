@@ -6,7 +6,7 @@ public class CameraMov : MonoBehaviour
 {
     
     Transform CameraPos;
-    float speed = 10.0f;
+    public float speed = 30.0f;
 
     void Start()
     {
