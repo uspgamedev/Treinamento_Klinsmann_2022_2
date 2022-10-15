@@ -677,7 +677,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 952136906718737023, guid: ad29f157e3d5601089ea6dc7caa2c3bf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad29f157e3d5601089ea6dc7caa2c3bf, type: 3}
 --- !u!1 &2042787430 stripped
 GameObject:
@@ -747,23 +748,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2042787434 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 952136906718737023, guid: ad29f157e3d5601089ea6dc7caa2c3bf, type: 3}
-  m_PrefabInstance: {fileID: 1983274625}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042787430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0929439abee80d23877dcec7f1cadd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2042787436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7507004310854738292, guid: ad29f157e3d5601089ea6dc7caa2c3bf, type: 3}
   m_PrefabInstance: {fileID: 1983274625}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2042787437
+--- !u!114 &2042787439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -775,5 +765,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad15af8b1670fa8f93f9735a2f1a376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 2042787434}
+  controller: {fileID: 2042787440}
   runSpeed: 40
+--- !u!114 &2042787440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042787430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be657dbd4fcded43878b4aa41499786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 400
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  m_GroundCheck: {fileID: 919660556}
+  m_CeilingCheck: {fileID: 1474631111}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
