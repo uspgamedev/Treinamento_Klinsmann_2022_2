@@ -173,23 +173,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 299409564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64134628a8882ed4c8493322cca68181, type: 3}
+  m_Script: {fileID: 11500000, guid: fe7058db059afc344937080d326e77b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 299409567}
   gradient:
     serializedVersion: 2
     key0: {r: 0.7176471, g: 0.03137255, b: 0.03137255, a: 1}
-    key1: {r: 1, g: 0.9147424, b: 0.088679194, a: 1}
-    key2: {r: 0.14765632, g: 0.6037736, b: 0.13898183, a: 0}
-    key3: {r: 0.14765632, g: 0.6037736, b: 0.13898183, a: 0}
+    key1: {r: 0.9150943, g: 0.73246706, b: 0.02935202, a: 1}
+    key2: {r: 0.022870373, g: 0.6509434, b: 0, a: 0}
+    key3: {r: 0.022870373, g: 0.6509434, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 16384
     ctime1: 39321
-    ctime2: 53777
+    ctime2: 47031
     ctime3: 65535
     ctime4: 0
     ctime5: 0
@@ -548,11 +548,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1287318682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87e47a3170bb3b6449c0cdde9d8d2285, type: 3}
+  m_Script: {fileID: 11500000, guid: c460410bdd9571148aeee8a3601bc7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  currentHealth: 0
+  currentHealth: 20
   healthBar: {fileID: 299409566}
 --- !u!1 &1549628414
 GameObject:
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1549628414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64134628a8882ed4c8493322cca68181, type: 3}
+  m_Script: {fileID: 11500000, guid: fe7058db059afc344937080d326e77b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
