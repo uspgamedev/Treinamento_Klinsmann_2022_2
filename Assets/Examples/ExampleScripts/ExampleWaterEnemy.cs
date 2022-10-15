@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterEnemy : Enemy
+public class ExampleWaterEnemy : Enemy
 {
     public float ymoveSpeed;
     void Start()
