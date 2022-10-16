@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7507004310854738292}
   - component: {fileID: 118509371895269300}
-  - component: {fileID: 952136906718737023}
   - component: {fileID: 2042787431}
   - component: {fileID: 2042787432}
   - component: {fileID: 2042787433}
@@ -18,6 +17,7 @@ GameObject:
   - component: {fileID: 7404520983588832873}
   - component: {fileID: 2042787438}
   - component: {fileID: 2740105696663005278}
+  - component: {fileID: 3630661687215581776}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -94,42 +94,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &952136906718737023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7525022893987052888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0929439abee80d23877dcec7f1cadd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 700
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 2147483647
-  m_GroundCheck: {fileID: 3757533596644814459}
-  m_CeilingCheck: {fileID: 652153759033638532}
-  animator: {fileID: 2042787438}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2740105696663005278}
-        m_TargetAssemblyTypeName: PlayerMov, Assembly-CSharp
-        m_MethodName: OnLanding
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!58 &2042787431
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -267,9 +231,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad15af8b1670fa8f93f9735a2f1a376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 952136906718737023}
+  controller: {fileID: 3630661687215581776}
   runSpeed: 40
   animator: {fileID: 2042787438}
+--- !u!114 &3630661687215581776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7525022893987052888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be657dbd4fcded43878b4aa41499786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 700
+  m_MovementSmoothing: 0.05
+  m_AirControl: 1
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  m_GroundCheck: {fileID: 3757533596644814459}
+  m_CeilingCheck: {fileID: 652153759033638532}
+  animator: {fileID: 2042787438}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2740105696663005278}
+        m_TargetAssemblyTypeName: PlayerMov, Assembly-CSharp
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8572889414510106150
 GameObject:
   m_ObjectHideFlags: 0
