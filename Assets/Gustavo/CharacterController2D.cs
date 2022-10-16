@@ -16,6 +16,10 @@ public class CharacterController2D : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
+	// public Sprite spriteFacingRight; //Sprite when character is facing right
+	// public Sprite spriteFacingLeft; //Sprite when character is facing left
+	// private SpriteRenderer spriteRenderer;
+	public Animator animator;
 
 	[Header("Events")]
 	[Space]
@@ -62,20 +66,22 @@ public class CharacterController2D : MonoBehaviour
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-			Debug.Log(m_Rigidbody2D.velocity);
 
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !m_FacingRight)
 			{
 				// ... flip the player.
 				Flip();
+				animator.SetBool("Is_Right", m_FacingRight);
 			}
 			// Otherwise if the input is moving the player left and the player is facing right...
 			else if (move < 0 && m_FacingRight)
 			{
 				// ... flip the player.
 				Flip();
+				animator.SetBool("Is_Right", m_FacingRight);
 			}
+			
 		}
 		// If the player should jump...
 		if (m_Grounded && jump)
@@ -93,8 +99,8 @@ public class CharacterController2D : MonoBehaviour
 		m_FacingRight = !m_FacingRight;
 
 		// Multiply the player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
+		// Vector3 theScale = transform.localScale;
+		// theScale.x *= -1;
+		// transform.localScale = theScale;
 	}
 }
