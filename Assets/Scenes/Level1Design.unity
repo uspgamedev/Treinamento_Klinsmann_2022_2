@@ -19902,6 +19902,11 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &416305624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7525022893987052888, guid: 2f04c56804f5bcd948a50847a99a1e83, type: 3}
+  m_PrefabInstance: {fileID: 2110567548}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &556145789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20911,6 +20916,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7507004310854738292, guid: 2f04c56804f5bcd948a50847a99a1e83, type: 3}
   m_PrefabInstance: {fileID: 2110567548}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1690770178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416305624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38032dd1245fc9b8ab0f5c3af5d23a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 398079230}
+  maxHealth: 20
 --- !u!1 &1692315730
 GameObject:
   m_ObjectHideFlags: 0
