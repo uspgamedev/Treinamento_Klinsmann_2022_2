@@ -13,14 +13,12 @@ GameObject:
   - component: {fileID: 2042787431}
   - component: {fileID: 2042787432}
   - component: {fileID: 2042787433}
-  - component: {fileID: 7550297317460655239}
-  - component: {fileID: 7404520983588832873}
   - component: {fileID: 2042787438}
   - component: {fileID: 2740105696663005278}
   - component: {fileID: 3630661687215581776}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,48 +155,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!58 &7550297317460655239
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7525022893987052888}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 670bba7fac46c237ab604525aff66a38, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.034968972, y: -0.033685632}
-  serializedVersion: 2
-  m_Radius: 0.08063274
---- !u!61 &7404520983588832873
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7525022893987052888}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 670bba7fac46c237ab604525aff66a38, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.034167178, y: 0.02013627}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16075258, y: 0.105385534}
-  m_EdgeRadius: 0
 --- !u!95 &2042787438
 Animator:
   serializedVersion: 4
@@ -234,8 +190,6 @@ MonoBehaviour:
   controller: {fileID: 3630661687215581776}
   runSpeed: 40
   animator: {fileID: 2042787438}
-  healthBar: {fileID: 0}
-  maxHealth: 20
 --- !u!114 &3630661687215581776
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - BasicEnemy
+  - Enemy
+  - BoatPlatform
+  - Heart
   layers:
   - Default
   - TransparentFX

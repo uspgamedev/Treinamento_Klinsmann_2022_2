@@ -7,6 +7,8 @@ public class PlayerBehavior : MonoBehaviour
     public HealthBar healthBar;
     public int maxHealth = 20;
     int currentHealth;
+    public int score = 0;
+    public GameUIManager gameUIManager;
 
     void Start(){
         currentHealth = maxHealth;
@@ -27,6 +29,17 @@ public class PlayerBehavior : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+    }
+
+    public void RestoreLife(int life){
+        currentHealth += life;
+        Debug.Log("Aumentou vida");
+        healthBar.SetHealth(currentHealth);
+    }
+
+    public void addScore(int scoreToAdd){
+        score += scoreToAdd;
+        gameUIManager.changeUIScore(score);
     }
 
     void OnCollisionEnter2D(Collision2D col)
