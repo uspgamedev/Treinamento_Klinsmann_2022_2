@@ -20084,9 +20084,9 @@ GameObject:
   - component: {fileID: 806320029}
   - component: {fileID: 806320028}
   - component: {fileID: 806320027}
-  - component: {fileID: 806320030}
   - component: {fileID: 806320031}
   - component: {fileID: 806320032}
+  - component: {fileID: 806320033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -20129,7 +20129,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.34
+  orthographic size: 6.778211
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -20160,19 +20160,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &806320030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806320026}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5001e164535a84e61964f76440b24704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
 --- !u!61 &806320031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20220,6 +20207,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &806320033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806320026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e123edb260314e6bc8c5f46290283e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 1690770168}
+  offsetx: 3
+  offsety: 2
 --- !u!1001 &887596998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20904,6 +20906,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1690770168 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7507004310854738292, guid: 2f04c56804f5bcd948a50847a99a1e83, type: 3}
+  m_PrefabInstance: {fileID: 2110567548}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1692315730
 GameObject:
   m_ObjectHideFlags: 0
