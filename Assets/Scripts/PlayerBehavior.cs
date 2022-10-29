@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
+    [SerializeField] private SimpleFlash flash;
     public HealthBar healthBar;
     public int maxHealth = 20;
     int currentHealth;
@@ -29,6 +30,8 @@ public class PlayerBehavior : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+        Debug.Log("damage");
+        flash.Flash();
     }
 
     public void RestoreLife(int life){
