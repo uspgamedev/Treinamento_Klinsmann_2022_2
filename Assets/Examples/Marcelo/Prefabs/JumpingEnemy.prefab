@@ -173,6 +173,7 @@ MonoBehaviour:
   xSpeed: -4
   ySpeed: 4
   isTriggered: 0
+  facingRight: 1
 --- !u!1 &6979088565637030637
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpingEnemyTrigger : MonoBehaviour
+public class FlipCharacterScript : MonoBehaviour
 {
-    public GameObject enemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +14,5 @@ public class JumpingEnemyTrigger : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void OnTriggerEnter2D(Collider2D collider){
-        if(collider.gameObject.tag == "MainCamera")
-            enemy.GetComponent<EnemyBehavior>().isTriggered = true;
     }
 }
