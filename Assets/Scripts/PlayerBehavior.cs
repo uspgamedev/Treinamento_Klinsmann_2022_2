@@ -23,6 +23,9 @@ public class PlayerBehavior : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.KeypadEnter)){
             TakeDamage(4);
         }
+        if(currentHealth < 0){
+            playerDeath();
+        }
     }
 
     void TakeDamage(int damage) 
@@ -43,6 +46,10 @@ public class PlayerBehavior : MonoBehaviour
     public void addScore(int scoreToAdd){
         score += scoreToAdd;
         gameUIManager.changeUIScore(score);
+    }
+
+    public void playerDeath(){
+        gameUIManager.gameOverTrigger();
     }
 
     void OnCollisionEnter2D(Collision2D col)
