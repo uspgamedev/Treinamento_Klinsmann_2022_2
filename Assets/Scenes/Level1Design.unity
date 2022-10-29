@@ -21983,10 +21983,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38032dd1245fc9b8ab0f5c3af5d23a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flash: {fileID: 1690770186}
   healthBar: {fileID: 398079230}
   maxHealth: 20
   score: 0
   gameUIManager: {fileID: 1897238772}
+--- !u!114 &1690770186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416305624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599ef0a94eab31842a3a6d4d50f085e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: ddeb3c51db74c2a49b9b9a67a4c68f4a, type: 2}
+  duration: 0.15
 --- !u!1 &1692315730
 GameObject:
   m_ObjectHideFlags: 0
@@ -22365,11 +22380,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7507004310854738292, guid: 2f04c56804f5bcd948a50847a99a1e83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.92
+      value: -26.67
       objectReference: {fileID: 0}
     - target: {fileID: 7507004310854738292, guid: 2f04c56804f5bcd948a50847a99a1e83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.73
+      value: 2.48
       objectReference: {fileID: 0}
     - target: {fileID: 7507004310854738292, guid: 2f04c56804f5bcd948a50847a99a1e83, type: 3}
       propertyPath: m_LocalPosition.z
