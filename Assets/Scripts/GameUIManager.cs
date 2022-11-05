@@ -23,6 +23,10 @@ public class GameUIManager : MonoBehaviour
         gameOverScreen.SetActive(true);
     }
 
+    public void restartLevel(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     void goToMenu(){
 
     }
