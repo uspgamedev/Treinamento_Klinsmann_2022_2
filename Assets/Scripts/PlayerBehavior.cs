@@ -10,12 +10,15 @@ public class PlayerBehavior : MonoBehaviour
     int currentHealth;
     public int score = 0;
     public GameUIManager gameUIManager;
+    [SerializeField] private GameObject player;
 
     void Start(){
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
+ 
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -52,10 +55,20 @@ public class PlayerBehavior : MonoBehaviour
         gameUIManager.gameOverTrigger();
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if(col.gameObject.tag == "Enemy"){
+        if(other.gameObject.tag == "Enemy"){
             TakeDamage(4);
         }
+        if (other.gameObject.tag == "BoatPlatform")
+        {
+            player.transform.parent = other.gameObject.transform;
+            Debug.Log("dasdas");
+
+        }
+    }
+    void OnCollisionExit2D(Collision2D other)
+    {
+        player.transform.parent = null;
     }
 }

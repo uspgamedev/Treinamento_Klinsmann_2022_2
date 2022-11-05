@@ -6,6 +6,7 @@ public class PlayerMov : MonoBehaviour
 {
 
     public PlayerController controller;
+    public GameObject player;
     float horizontalMove = 0f;
     public float runSpeed = 40f;
     bool jump = false;
@@ -23,6 +24,16 @@ public class PlayerMov : MonoBehaviour
             Debug.Log("pulou");
         }
 
+    }
+    public void onTriggerEnter2D(Collider2D other){
+        if (other.gameObject.CompareTag("BoatPlataform"))
+        {
+            player.transform.parent = other.gameObject.transform;
+        }
+
+    }
+    public void onTriggerExit2d(Collider2D other) {
+        player.transform.parent = null;
     }
 
     public void OnLanding(){
