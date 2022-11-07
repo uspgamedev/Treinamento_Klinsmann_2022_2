@@ -21780,6 +21780,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7242642129643933467, guid: 14af3e8b91ea951c19251df7942646c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3277f56d61c28de4fa1ca835c49130b6, type: 3}
     - target: {fileID: 7242642129643933469, guid: 14af3e8b91ea951c19251df7942646c7, type: 3}
       propertyPath: m_Name
       value: ScoreItem
@@ -44041,9 +44045,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7242642129643933467, guid: 14af3e8b91ea951c19251df7942646c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3cf559ccfc4e05a439ff71d657b199e9, type: 3}
+    - target: {fileID: 7242642129643933468, guid: 14af3e8b91ea951c19251df7942646c7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242642129643933468, guid: 14af3e8b91ea951c19251df7942646c7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.64
+      objectReference: {fileID: 0}
     - target: {fileID: 7242642129643933469, guid: 14af3e8b91ea951c19251df7942646c7, type: 3}
       propertyPath: m_Name
-      value: Square
+      value: Square (Item)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14af3e8b91ea951c19251df7942646c7, type: 3}
