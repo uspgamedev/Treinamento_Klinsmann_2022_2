@@ -9,7 +9,7 @@ public class GameUIManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreUI;
     public GameObject gameOverScreen;
-    public GameObject menuScreen;
+    public GameObject victoryScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,4 +32,8 @@ public class GameUIManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void victoryScreenToggle()
+    {
+        victoryScreen.SetActive(true);
+    }
 }
