@@ -3,8 +3,8 @@ using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
-	[SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
-	[SerializeField] private float m_water_JumpForce = 200f;
+	[SerializeField] private float m_JumpForce = 15f;                          // Amount of force added when the player jumps.
+	[SerializeField] private float m_water_JumpForce = 8f;
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
 			{
 				m_Grounded = false;
 				in_water = true;
+				times_jumped = 0;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
 			}
@@ -102,10 +103,7 @@ public class PlayerController : MonoBehaviour
 			Debug.Log("jump " + jump);
 			times_jumped++;
 			m_Grounded = false;
-			if (in_water)
-				m_Rigidbody2D.AddForce(new Vector2(0f, m_water_JumpForce));
-			else
-				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_JumpForce);
 		}
         
     }

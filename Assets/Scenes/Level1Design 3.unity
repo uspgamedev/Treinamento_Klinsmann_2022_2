@@ -44561,6 +44561,14 @@ PrefabInstance:
       propertyPath: gameUIManager
       value: 
       objectReference: {fileID: 1897238772}
+    - target: {fileID: 3630661687215581776, guid: 2f04c56804f5bcd948a50847a99a1e83, type: 3}
+      propertyPath: m_JumpForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630661687215581776, guid: 2f04c56804f5bcd948a50847a99a1e83, type: 3}
+      propertyPath: m_water_JumpForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7507004310854738292, guid: 2f04c56804f5bcd948a50847a99a1e83, type: 3}
       propertyPath: m_RootOrder
       value: 14
