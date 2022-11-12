@@ -3,7 +3,8 @@ using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
-	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
+	[SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
+	[SerializeField] private float m_water_JumpForce = 200f;
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
@@ -17,6 +18,9 @@ public class PlayerController : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 	public Animator animator;
+	private int max_jumping_times = 2;
+	private int times_jumped = 0;
+	private bool in_water = false;
 
 	[Header("Events")]
 	[Space]
@@ -38,15 +42,24 @@ public class PlayerController : MonoBehaviour
 	{
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
-
+		in_water = false;
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		// This can be done using layers instead but Sample Assets will not overwrite your project settings.
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
 		for (int i = 0; i < colliders.Length; i++)
 		{
-			if (colliders[i].gameObject != gameObject)
+			if (colliders[i].gameObject != gameObject && (colliders[i].gameObject.tag == "Ground" ))
 			{
 				m_Grounded = true;
+				times_jumped = 0;
+				in_water = false;
+				if (!wasGrounded)
+					OnLandEvent.Invoke();
+			}
+			if (colliders[i].gameObject != gameObject && (colliders[i].gameObject.tag == "Water"))
+			{
+				m_Grounded = false;
+				in_water = true;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
 			}
@@ -57,7 +70,7 @@ public class PlayerController : MonoBehaviour
 	public void Move(float move, bool jump)
 	{
 		//only control the player if grounded or airControl is turned on
-		if (m_Grounded || m_AirControl)
+		if (m_Grounded || m_AirControl )
 		{
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
@@ -81,14 +94,21 @@ public class PlayerController : MonoBehaviour
 			}
 			
 		}
+		Debug.Log("jumping times " + times_jumped);
 		// If the player should jump...
-		if (m_Grounded && jump)
+		if ((jump && m_Grounded) || (jump && times_jumped< max_jumping_times) || (jump && in_water))
 		{
 			// Add a vertical force to the player.
+			Debug.Log("jump " + jump);
+			times_jumped++;
 			m_Grounded = false;
-			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			if (in_water)
+				m_Rigidbody2D.AddForce(new Vector2(0f, m_water_JumpForce));
+			else
+				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
-	}
+        
+    }
 
 
 	private void Flip()
