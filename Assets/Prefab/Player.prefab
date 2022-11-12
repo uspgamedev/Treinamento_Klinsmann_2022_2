@@ -18,8 +18,6 @@ GameObject:
   - component: {fileID: 3630661687215581776}
   - component: {fileID: 1690770178}
   - component: {fileID: 1690770186}
-  - component: {fileID: 1640491491100461184}
-  - component: {fileID: 1731046809422191783}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -192,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 3630661687215581776}
+  player: {fileID: 7525022893987052888}
   runSpeed: 40
   animator: {fileID: 2042787438}
 --- !u!114 &3630661687215581776
@@ -206,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be657dbd4fcded43878b4aa41499786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 700
+  m_JumpForce: 900
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -249,38 +248,6 @@ MonoBehaviour:
   gameUIManager: {fileID: 0}
   player: {fileID: 7525022893987052888}
 --- !u!114 &1690770186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7525022893987052888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 599ef0a94eab31842a3a6d4d50f085e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 2100000, guid: ddeb3c51db74c2a49b9b9a67a4c68f4a, type: 2}
-  duration: 0.15
---- !u!114 &1640491491100461184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7525022893987052888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38032dd1245fc9b8ab0f5c3af5d23a51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flash: {fileID: 1731046809422191783}
-  healthBar: {fileID: 0}
-  maxHealth: 20
-  score: 0
-  gameUIManager: {fileID: 0}
-  player: {fileID: 0}
---- !u!114 &1731046809422191783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
