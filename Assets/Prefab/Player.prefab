@@ -107,9 +107,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.034968972, y: -0.033685632}
+  m_Offset: {x: -0.0051254025, y: -0.032102097}
   serializedVersion: 2
-  m_Radius: 0.08063274
+  m_Radius: 0.11189731
 --- !u!61 &2042787432
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 3630661687215581776}
+  player: {fileID: 7525022893987052888}
   runSpeed: 40
   animator: {fileID: 2042787438}
 --- !u!114 &3630661687215581776
@@ -204,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be657dbd4fcded43878b4aa41499786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 700
+  m_JumpForce: 900
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:

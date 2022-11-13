@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: barco
+  m_Name: Remadores
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: e826cae6a71742140a35f76afc5f250d, type: 3}
-    - time: 0.26666668
-      value: {fileID: 21300000, guid: 88559d4fe26cb914b99cfd8154cb903a, type: 3}
+      value: {fileID: 21300000, guid: 63a416c432f1dcb48ac929acbf289b99, type: 3}
+    - time: 0.6666667
+      value: {fileID: 21300000, guid: 85e5e5e23f575aa4ea2be7c8b5f86e88, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,14 +42,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: e826cae6a71742140a35f76afc5f250d, type: 3}
-    - {fileID: 21300000, guid: 88559d4fe26cb914b99cfd8154cb903a, type: 3}
+    - {fileID: 21300000, guid: 63a416c432f1dcb48ac929acbf289b99, type: 3}
+    - {fileID: 21300000, guid: 85e5e5e23f575aa4ea2be7c8b5f86e88, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 1.3
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -69,7 +69,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.5
+  - time: 1.3
     functionName: 
     data: 
     objectReferenceParameter: {fileID: 0}

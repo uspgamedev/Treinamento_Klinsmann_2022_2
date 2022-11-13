@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - BoatPlatform
   - Heart
+  - Water
   layers:
   - Default
   - TransparentFX
