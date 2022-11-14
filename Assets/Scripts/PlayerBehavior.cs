@@ -34,7 +34,6 @@ public class PlayerBehavior : MonoBehaviour
     void TakeDamage(int damage) 
     {
         currentHealth -= damage;
-
         healthBar.SetHealth(currentHealth);
         Debug.Log("damage");
         flash.Flash();
@@ -56,14 +55,13 @@ public class PlayerBehavior : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other)
-    {
+    {   
         if(other.gameObject.tag == "Enemy"){
             TakeDamage(4);
         }
         if (other.gameObject.tag == "BoatPlatform")
         {
             player.transform.parent = other.gameObject.transform;
-            Debug.Log("dasdas");
 
         }
     }
