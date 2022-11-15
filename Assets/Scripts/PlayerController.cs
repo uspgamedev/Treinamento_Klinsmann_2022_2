@@ -30,9 +30,12 @@ public class PlayerController : MonoBehaviour
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
+	private AudioManager audioManager;
+
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
+		audioManager = FindObjectOfType<AudioManager>();
 
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
@@ -73,11 +76,17 @@ public class PlayerController : MonoBehaviour
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded || m_AirControl )
 		{
+			if(m_Grounded && move != 0){
+				audioManager.Play("Footsteps");
+			}
+			else{
+				audioManager.Stop("Footsteps");
+			}
+
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-			//Debug.Log(m_Rigidbody2D.velocity);
 
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !m_FacingRight)
@@ -95,12 +104,13 @@ public class PlayerController : MonoBehaviour
 			}
 			
 		}
-		Debug.Log("jumping times " + times_jumped);
+		// Debug.Log("jumping times " + times_jumped);
 		// If the player should jump...
 		if ((jump && m_Grounded) || (jump && times_jumped< max_jumping_times) || (jump && in_water))
 		{
 			// Add a vertical force to the player.
 			Debug.Log("jump " + jump);
+			audioManager.Play("Jump");
 			times_jumped++;
 			m_Grounded = false;
 			m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_JumpForce);
