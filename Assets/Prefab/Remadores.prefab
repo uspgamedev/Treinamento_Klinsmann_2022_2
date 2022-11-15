@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8402600039858861966}
   - component: {fileID: 8402600039858861952}
-  - component: {fileID: 8402600039858861967}
+  - component: {fileID: 7073816419616249673}
   m_Layer: 0
   m_Name: JumpingEnemyTrigger
   m_TagString: Untagged
@@ -253,7 +253,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8402600039858861967
+--- !u!114 &7073816419616249673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8402600039858861965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe1113b60652d11bbd31d5a0aa0e877, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c5e75fb899020a44a7272cdc4ac3616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4927739808268066221}

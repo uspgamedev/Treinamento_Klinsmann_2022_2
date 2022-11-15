@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1729734726}
   - component: {fileID: 1729734728}
-  - component: {fileID: 1729734727}
+  - component: {fileID: 522267298761883990}
   m_Layer: 0
   m_Name: JumpingEnemyTrigger
-  m_TagString: Untagged
+  m_TagString: JumpingEnemyTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1729734727
+--- !u!114 &522267298761883990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,10 +68,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1729734725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe1113b60652d11bbd31d5a0aa0e877, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c5e75fb899020a44a7272cdc4ac3616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 3530488992665387621}
+  trigger: {fileID: 1729734725}
 --- !u!1 &3530488992665387621
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +230,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
