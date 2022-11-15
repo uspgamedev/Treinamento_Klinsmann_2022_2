@@ -57,6 +57,7 @@ public class PlayerBehavior : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {   
         if(other.gameObject.tag == "Enemy"){
+            FindObjectOfType<AudioManager>().Play("Damage");
             TakeDamage(4);
         }
         if (other.gameObject.tag == "BoatPlatform")
