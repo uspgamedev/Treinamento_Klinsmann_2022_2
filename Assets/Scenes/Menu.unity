@@ -591,8 +591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3, y: 263}
-  m_SizeDelta: {x: -599.7085, y: -304.6}
+  m_AnchoredPosition: {x: 3, y: 85}
+  m_SizeDelta: {x: -295.4159, y: -313.719}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702337771
 MonoBehaviour:
@@ -614,7 +614,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITULO
+  m_text: CAPIUSPVARA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef4960adda235e345b22422541955753, type: 2}
   m_sharedMaterial: {fileID: -7955611103832131896, guid: ef4960adda235e345b22422541955753, type: 2}
@@ -641,13 +641,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 85
+  m_fontSizeBase: 85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -722,7 +722,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreUI: {fileID: 0}
   gameOverScreen: {fileID: 0}
-  menuScreen: {fileID: 539612232}
+  victoryScreen: {fileID: 0}
+  finalScoreUI: {fileID: 0}
+  scoreInfo: {fileID: 0}
 --- !u!4 &1021382753
 Transform:
   m_ObjectHideFlags: 0
@@ -773,7 +775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 336, y: 258}
+  m_AnchoredPosition: {x: 277, y: 354.8}
   m_SizeDelta: {x: -762, y: -354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421922696
@@ -1094,14 +1096,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.6, b: 0.6, a: 0.32156864}
+  m_Color: {r: 0.73333335, g: 0.73333335, b: 0.73333335, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1130d19f04638be4ebeafa732dd2b05a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c61052da86af3d49826171e41211b0f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1154,7 +1156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 120}
+  m_AnchoredPosition: {x: 3, y: 355}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1932443782
