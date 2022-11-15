@@ -18,7 +18,10 @@ public class EnemyTrigger : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collider){
-        if(collider.gameObject.tag == "MainCamera")
+        if(collider.gameObject.tag == "MainCamera"){
             enemy.GetComponent<EnemyBehavior>().isTriggered = true;
+            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+        }
     }
 }

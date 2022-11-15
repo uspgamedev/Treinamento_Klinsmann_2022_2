@@ -24,13 +24,11 @@ public class GameUIManager : MonoBehaviour
     }
 
     public void gameOverTrigger(){
-        Time.timeScale = 0;
         gameOverScreen.SetActive(true);
         scoreInfo.SetActive(true);
     }
 
     public void startLevel(){
-        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 
@@ -42,6 +40,5 @@ public class GameUIManager : MonoBehaviour
     {
         victoryScreen.SetActive(true);
         scoreInfo.SetActive(true);
-        Time.timeScale = 0;
     }
 }

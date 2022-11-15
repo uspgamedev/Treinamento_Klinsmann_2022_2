@@ -19,4 +19,11 @@ public class WaterEnemy : MonoBehaviour
         if(enemyBody.position.y <= jumpPosition)
             enemyBody.velocity = new Vector2(0, ySpeed);
     }
+
+    void OnTriggerEnter2D(Collider2D collider){
+        if(collider.gameObject.tag == "Player"){
+            collider.gameObject.GetComponent<PlayerBehavior>().TakeDamage(4);
+        }
+    }
+
 }
