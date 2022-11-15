@@ -35,6 +35,12 @@ public class EnemyBehavior : MonoBehaviour
         if(isTriggered && collision.gameObject.tag == "Ground" && jumping)
             enemyBody.velocity = new Vector2(0, ySpeed);
     }
+
+    void OnTriggerEnter2D(Collider2D collider){
+        if(isTriggered && collider.gameObject.tag == "Player"){
+            collider.gameObject.GetComponent<PlayerBehavior>().TakeDamage(4);
+        }
+    }
     void flip()
     {
         facingRight = !facingRight;
