@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
 
-        sencentes = new Queue<string>();
+        sentences = new Queue<string>();
         
     }
 }
