@@ -44,16 +44,34 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-        
-        IEnumerator TypeSentence (string sentence)
+
+        IEnumerator TypeSentence(string sentence)
         {
             dialogueText.text = "";
             foreach (char letter in sentence.ToCharArray())
             {
                 dialogueText.text += letter;
-                yield return null;
+                yield return new WaitForSeconds(0.05f);
             }
         }
+
+        //public IEnumerator TypeText(TextMeshProUGUI descriptionText, string descriptionToDisplay)
+        //{
+        //    isTyping = true;
+        //    descriptionText.text = "";
+        //    foreach (char letter in descriptionToDisplay.ToCharArray())
+        //    {
+        //        if (!isTyping)
+        //        {
+        //            descriptionText.text = "";
+        //            descriptionText.text = descriptionToDisplay;
+        //            break;
+        //        }
+        //        descriptionText.text += letter;
+        //        yield return new WaitForSeconds(0.03f);
+        //    }
+        //    isTyping = false;
+        //}
         void EndDialogue()
         {
             animator.SetBool("IsOpen", false); ;
