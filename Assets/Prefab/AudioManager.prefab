@@ -75,3 +75,15 @@ MonoBehaviour:
     pitch: 1.03
     source: {fileID: 0}
     loop: 0
+  - name: SplashIn
+    clip: {fileID: 8300000, guid: e2a53f3f8878a8b9ba5c69fe4e76d36d, type: 3}
+    volume: 1
+    pitch: 1.03
+    source: {fileID: 0}
+    loop: 0
+  - name: SplashOut
+    clip: {fileID: 8300000, guid: 96167520c4a55372d84326949e17b853, type: 3}
+    volume: 1
+    pitch: 1.03
+    source: {fileID: 0}
+    loop: 0
