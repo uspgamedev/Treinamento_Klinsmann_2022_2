@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 575670639}
   - component: {fileID: 575670641}
   - component: {fileID: 575670640}
+  - component: {fileID: 575670642}
   m_Layer: 0
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -153,11 +154,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 691578406}
   - {fileID: 710497940}
   - {fileID: 1306849549}
   - {fileID: 1583912448}
   m_Father: {fileID: 765035049}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -202,6 +204,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575670638}
   m_CullTransparentMesh: 1
+--- !u!95 &575670642
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575670638}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ea3bae92ee71db48ad6507772e96dda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &691578405
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,12 +254,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 765035049}
+  m_Father: {fileID: 575670639}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -308, y: 60}
+  m_AnchoredPosition: {x: -309.6585, y: 178}
   m_SizeDelta: {x: 239.255, y: 266.2948}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691578407
@@ -290,7 +312,7 @@ GameObject:
   - component: {fileID: 710497942}
   - component: {fileID: 710497941}
   m_Layer: 0
-  m_Name: CharacterText (TMP)
+  m_Name: NameText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -309,7 +331,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 575670639}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -444,7 +466,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 691578406}
   - {fileID: 575670639}
   - {fileID: 1117831997}
   m_Father: {fileID: 1137762626}
@@ -528,7 +549,7 @@ GameObject:
   - component: {fileID: 1117832001}
   - component: {fileID: 1117832000}
   - component: {fileID: 1117831999}
-  - component: {fileID: 1117831998}
+  - component: {fileID: 1117832002}
   m_Layer: 0
   m_Name: DialogueTrigger
   m_TagString: Untagged
@@ -550,25 +571,13 @@ RectTransform:
   m_Children:
   - {fileID: 2005033085}
   m_Father: {fileID: 765035049}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1, y: 73}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1117831998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117831996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e35554e5c12f2e4b9cae3b8838393cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1117831999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,7 +621,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1117832000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1117832002}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1117832000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,6 +672,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117831996}
   m_CullTransparentMesh: 1
+--- !u!114 &1117832002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117831996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e35554e5c12f2e4b9cae3b8838393cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: CAPIVARA
+    sentences:
+    - Om nom nom
+    - Cookie
 --- !u!1 &1134917457
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1134917459}
-  - component: {fileID: 1134917458}
+  - component: {fileID: 1134917460}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -668,18 +706,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1134917458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134917457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cf9b685b78fb6b4c9734baee459594d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1134917459
 Transform:
   m_ObjectHideFlags: 0
@@ -695,6 +721,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1134917460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134917457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf9b685b78fb6b4c9734baee459594d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 710497941}
+  dialogueText: {fileID: 1306849550}
+  animator: {fileID: 575670642}
 --- !u!1 &1137762623
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +852,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 575670639}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -928,7 +969,7 @@ GameObject:
   - component: {fileID: 1583912450}
   - component: {fileID: 1583912449}
   m_Layer: 0
-  m_Name: Button
+  m_Name: ContinueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -948,7 +989,7 @@ RectTransform:
   m_Children:
   - {fileID: 2040411118}
   m_Father: {fileID: 575670639}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -998,7 +1039,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1583912450}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1134917460}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: DisplayNextSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1583912450
 MonoBehaviour:
   m_ObjectHideFlags: 0
