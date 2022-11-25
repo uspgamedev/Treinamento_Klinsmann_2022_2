@@ -27,14 +27,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play(string name){
+    void Start(){
+        Play("MenuTheme", false);
+    }
+
+    public void Play(string name, bool overlapSound){
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if(s == null){
             Debug.LogWarning("Som " + name + " não existe");
             return;
         }
-        if(!s.source.isPlaying)
+        if(overlapSound || (!overlapSound && !s.source.isPlaying)){
+            Debug.Log("Tocando: " + name);
             s.source.Play();
+        }     
     }
 
     public void Pause(string name){
@@ -53,7 +59,10 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Som " + name + " não existe");
             return;
         } 
-        if(s.source.isPlaying) 
-            s.source.Stop();
+        if(s.source.isPlaying){
+            Debug.Log("Parou: " + name);
+            s.source.Stop();    
+        } 
+            
     }    
 }

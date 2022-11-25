@@ -75,15 +75,21 @@ MonoBehaviour:
     pitch: 1.03
     source: {fileID: 0}
     loop: 0
-  - name: SplashIn
-    clip: {fileID: 8300000, guid: e2a53f3f8878a8b9ba5c69fe4e76d36d, type: 3}
-    volume: 1
+  - name: Theme
+    clip: {fileID: 8300000, guid: e810ccf7f37c2cc0795dc53f2590c16a, type: 3}
+    volume: 0.33
     pitch: 1.03
     source: {fileID: 0}
-    loop: 0
-  - name: SplashOut
-    clip: {fileID: 8300000, guid: 96167520c4a55372d84326949e17b853, type: 3}
-    volume: 1
+    loop: 1
+  - name: MenuTheme
+    clip: {fileID: 8300000, guid: c721bebc993b11a1e9fa02cc5ad89c15, type: 3}
+    volume: 0.33
     pitch: 1.03
     source: {fileID: 0}
-    loop: 0
+    loop: 1
+  - name: GameOverTheme
+    clip: {fileID: 8300000, guid: 21d0222c4b3e835529aedac9748f4118, type: 3}
+    volume: 0.33
+    pitch: 1.03
+    source: {fileID: 0}
+    loop: 1

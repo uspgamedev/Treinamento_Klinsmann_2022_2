@@ -15,7 +15,7 @@ public class HeartBehavior : MonoBehaviour
     {
         if(col.gameObject.tag == "Player" && numberOfUses == 0){
             col.gameObject.GetComponent<PlayerBehavior>().RestoreLife(restoredLife);
-            FindObjectOfType<AudioManager>().Play("RestoreLife");
+            FindObjectOfType<AudioManager>().Play("RestoreLife", true);
             numberOfUses = 1;
             Destroy(this.gameObject);
         }

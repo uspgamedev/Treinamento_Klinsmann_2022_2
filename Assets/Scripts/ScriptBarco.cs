@@ -20,12 +20,12 @@ public class ScriptBarco : MonoBehaviour
         if (transform.position == pos1.position)
         {
             nextPos = pos2.position;
-            Debug.Log("transform.position == pos1.position");
+            // Debug.Log("transform.position == pos1.position");
         }
         if (transform.position == pos2.position)
         {
             nextPos = pos1.position;
-            Debug.Log("transform.position == pos2.position");
+            // Debug.Log("transform.position == pos2.position");
         }
 
         //enemyBody.velocity = new Vector2(direction*xSpeed, 0);
@@ -38,7 +38,7 @@ public class ScriptBarco : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag == "Ground"){
-            Debug.Log("COLLISION");
+            // Debug.Log("COLLISION");
             xSpeed *= -1;
         }
         else if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "BoatPlatform"){

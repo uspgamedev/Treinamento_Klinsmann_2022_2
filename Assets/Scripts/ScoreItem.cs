@@ -16,7 +16,7 @@ public class ScoreItem : MonoBehaviour
     {
         if(col.gameObject.tag == "Player" && numberOfUses == 0){
             col.gameObject.GetComponent<PlayerBehavior>().addScore(scoreToAdd);
-            FindObjectOfType<AudioManager>().Play("Score");
+            FindObjectOfType<AudioManager>().Play("Score", true);
             Debug.Log(col.gameObject.GetComponent<PlayerBehavior>().score);
             numberOfUses = 1;
             Destroy(this.gameObject);

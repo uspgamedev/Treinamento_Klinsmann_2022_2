@@ -26,19 +26,28 @@ public class GameUIManager : MonoBehaviour
     public void gameOverTrigger(){
         gameOverScreen.SetActive(true);
         scoreInfo.SetActive(true);
+        FindObjectOfType<AudioManager>().Stop("Theme");
+        FindObjectOfType<AudioManager>().Play("GameOverTheme", false);
     }
 
     public void startLevel(){
+        FindObjectOfType<AudioManager>().Stop("GameOverTheme");
+        FindObjectOfType<AudioManager>().Stop("MenuTheme");
         SceneManager.LoadScene(1);
+        FindObjectOfType<AudioManager>().Play("Theme", false);
     }
 
     public void goToMenu(){
+        FindObjectOfType<AudioManager>().Stop("GameOverTheme");
         SceneManager.LoadScene(0);
+        FindObjectOfType<AudioManager>().Play("MenuTheme", false);
     }
 
     public void victoryScreenToggle()
     {
+        FindObjectOfType<AudioManager>().Stop("Theme");
         victoryScreen.SetActive(true);
         scoreInfo.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("MenuTheme", false);
     }
 }

@@ -39,6 +39,7 @@ public class EnemyBehavior : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider){
         if(isTriggered && collider.gameObject.tag == "Player"){
             collider.gameObject.GetComponent<PlayerBehavior>().TakeDamage(4);
+            FindObjectOfType<AudioManager>().Play("Damage", true);
         }
     }
     void flip()

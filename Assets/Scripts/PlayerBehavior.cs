@@ -28,6 +28,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         if(currentHealth < 0){
             playerDeath();
+            currentHealth = 0;
         }
     }
 
@@ -57,7 +58,7 @@ public class PlayerBehavior : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {   
         if(other.gameObject.tag == "Enemy"){
-            FindObjectOfType<AudioManager>().Play("Damage");
+            FindObjectOfType<AudioManager>().Play("Damage", true);
             TakeDamage(4);
         }
         if (other.gameObject.tag == "BoatPlatform")

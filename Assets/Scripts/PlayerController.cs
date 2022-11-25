@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
 		if (m_Grounded || m_AirControl )
 		{
 			if(m_Grounded && move != 0){
-				audioManager.Play("Footsteps");
+				audioManager.Play("Footsteps", false);
 			}
 			else{
 				audioManager.Stop("Footsteps");
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
 		{
 			// Add a vertical force to the player.
 			Debug.Log("jump " + jump);
-			audioManager.Play("Jump");
+			audioManager.Play("Jump", true);
 			times_jumped++;
 			m_Grounded = false;
 			m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_JumpForce);
