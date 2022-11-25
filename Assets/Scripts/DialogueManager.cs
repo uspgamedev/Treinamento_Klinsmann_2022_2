@@ -23,7 +23,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("AAAAAAAAAAAAAAAA");
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
         sentences.Clear();
