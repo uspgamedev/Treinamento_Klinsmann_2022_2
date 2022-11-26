@@ -12,15 +12,18 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
     public Animator animator;
     private Queue<string> sentences;
-  
+    public Dialogue dialogue;
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+        StartDialogue(dialogue);
+     
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
+        Debug.Log("AAAAAAAAAAAAAAAA");
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
         sentences.Clear();
@@ -52,24 +55,6 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitForSeconds(0.05f);
             }
         }
-
-        //public IEnumerator TypeText(TextMeshProUGUI descriptionText, string descriptionToDisplay)
-        //{
-        //    isTyping = true;
-        //    descriptionText.text = "";
-        //    foreach (char letter in descriptionToDisplay.ToCharArray())
-        //    {
-        //        if (!isTyping)
-        //        {
-        //            descriptionText.text = "";
-        //            descriptionText.text = descriptionToDisplay;
-        //            break;
-        //        }
-        //        descriptionText.text += letter;
-        //        yield return new WaitForSeconds(0.03f);
-        //    }
-        //    isTyping = false;
-        //}
         void EndDialogue()
         {
             animator.SetBool("IsOpen", false); 
