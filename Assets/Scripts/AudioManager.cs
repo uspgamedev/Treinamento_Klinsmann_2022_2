@@ -51,7 +51,15 @@ public class AudioManager : MonoBehaviour
         }
         if(s.source.isPlaying) 
             s.source.Pause();
-    } 
+    }
+
+    public void StopSFX(){
+        Stop("Footsteps");
+        Stop("Jump");
+        Stop("Damage");
+        Stop("Score");
+        Stop("RestoreLife");
+    }
 
     public void Stop(string name){
         Sound s = Array.Find(sounds, sound => sound.name == name);

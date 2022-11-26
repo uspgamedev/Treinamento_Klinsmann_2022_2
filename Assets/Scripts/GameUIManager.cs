@@ -28,6 +28,7 @@ public class GameUIManager : MonoBehaviour
         scoreInfo.SetActive(true);
         FindObjectOfType<AudioManager>().Stop("Theme");
         FindObjectOfType<AudioManager>().Play("GameOverTheme", false);
+        FindObjectOfType<GameController>().Pause();
     }
 
     public void startLevel(){
@@ -35,12 +36,14 @@ public class GameUIManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("MenuTheme");
         SceneManager.LoadScene(1);
         FindObjectOfType<AudioManager>().Play("Theme", false);
+        FindObjectOfType<GameController>().Resume();
     }
 
     public void goToMenu(){
         FindObjectOfType<AudioManager>().Stop("GameOverTheme");
         SceneManager.LoadScene(0);
         FindObjectOfType<AudioManager>().Play("MenuTheme", false);
+        FindObjectOfType<GameController>().Resume();
     }
 
     public void victoryScreenToggle()
@@ -49,5 +52,6 @@ public class GameUIManager : MonoBehaviour
         victoryScreen.SetActive(true);
         scoreInfo.SetActive(true);
         FindObjectOfType<AudioManager>().Play("MenuTheme", false);
+        FindObjectOfType<GameController>().Pause();
     }
 }
