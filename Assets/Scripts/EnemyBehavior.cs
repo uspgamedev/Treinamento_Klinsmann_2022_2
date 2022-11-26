@@ -11,6 +11,7 @@ public class EnemyBehavior : MonoBehaviour
     public bool jumping = true;
     public bool flying = false;
     public float yFlyingAltitude = 0;
+    public bool IsSkullSpider = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,8 @@ public class EnemyBehavior : MonoBehaviour
             collider.gameObject.GetComponent<PlayerBehavior>().TakeDamage(4);
             FindObjectOfType<AudioManager>().Play("Damage", true);
         }
+        else if(collider.gameObject.tag == "Water" && IsSkullSpider)
+            Destroy(this.gameObject);
     }
     void flip()
     {
