@@ -754,10 +754,19 @@ MonoBehaviour:
     Green
     Valley Tileset: https://foozlecc.itch.io/green-valley-tileset
 
-    Pirate Bomb:
-    https://pixelfrog-assets.itch.io/pirate-bomb
+    Outside Tileset:
+    https://opengameart.org/content/outside-tileset
 
-    Vermin Asset Pack: https://deepdivegamestudio.itch.io/vermin-asset-pack'
+    Pirate Bomb: https://pixelfrog-assets.itch.io/pirate-bomb
+
+    Vermin
+    Asset Pack: https://deepdivegamestudio.itch.io/vermin-asset-pack
+
+    Lapsus
+    Pro Font: http://theguybrush.com/ | frankitu@gmail.com
+
+    Impact and UI Sounds:
+    https://kenney.nl/assets'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
